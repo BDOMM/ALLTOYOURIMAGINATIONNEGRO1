@@ -104,14 +104,14 @@
             display: none;
         }
         
-@media (max-width: 600px) {
-
-  body {
-        margin: 0;
-        padding: 0;
-        background-color: white;
-        font-family: "Helvetica Neue", sans-serif;
-        color: black;
+        @media (max-width: 600px) {
+            
+        #body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            font-family: "Helvetica Neue", sans-serif;
+            color: black;
     }
 
         #header {
@@ -207,8 +207,6 @@
 
 
 }
-
-
     </style>
 </head>
 <body>
@@ -272,6 +270,16 @@
             // Fade in the image
             image.style.transition = "opacity 1s";
             image.style.opacity = "1";
+        }
+
+        function fadeInImageAfterVideo() {
+            var image = document.getElementById("image");
+
+            // Gradually fade in the image
+            setTimeout(function () {
+                image.style.transition = "opacity 1s";
+                image.style.opacity = "1";
+            }, 1000); // 1000ms (1 second) delay before fading in the image
         }
 
         function fadeOutVideo() {
